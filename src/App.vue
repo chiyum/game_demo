@@ -11,14 +11,16 @@
 </template>
 
 <script>
-import { computed, onMounted, inject } from "vue";
+import { computed, onMounted, watch, inject } from "vue";
 import { useRoute } from "vue-router";
 import { isNil, defaultTo, path } from "ramda";
+// import modeService from "@/services/mode-service";
 // import pro168 from "@/assets/images/pro168_logo.png";
 export default {
   setup() {
+    const useRemMode = ["max"];
     const route = useRoute();
-    const mode = computed(() => inject("mode"));
+    const mode = computed(() => inject("mode-service"));
     const layout = computed(() => {
       /* 一開始都是 undefined */
       /* isNil為檢查空值，為null或undefined則return null */
@@ -36,10 +38,27 @@ export default {
       // default(path(["meta", "layout"], store.state.route))
       return currentLayout;
     });
+    const computeSize = () => {
+      const modes = mode.value.value.mode;
+      if (!useRemMode.includes(modes)) {
+        document.getElementsByTagName("html")[0].style = `font-size: 16px`;
+        return;
+      }
+      /* 設計尺寸： 750 * 1334 */
+      /* 字體大小隨著螢幕寬度更改 */
+      document.getElementsByTagName("html")[0].style = `font-size: ${
+        (document.body.clientWidth / 750) * 100
+      }px`;
+    };
 
     onMounted(() => {
-      // computeSize();
-      // window.addEventListener("resize", computeSize);
+      computeSize();
+      window.addEventListener("resize", computeSize);
+    });
+
+    /** 目前版本切換的rem 有些硬解 先用路由監聽 */
+    watch(route, () => {
+      computeSize();
     });
 
     return {

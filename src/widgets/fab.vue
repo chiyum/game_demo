@@ -16,7 +16,7 @@
     <div>切換版本</div>
     <div class="draggable-actions" v-if="isShowActions">
       <div
-        v-for="item in state.langList"
+        v-for="item in state.modeList"
         :key="item.value"
         @click="changeMode(item)"
       >
@@ -49,9 +49,11 @@ const router = useRouter();
 const draggableElement = ref(null);
 const isShowActions = ref(false);
 const state = reactive({
-  langList: [
+  modeList: [
     { value: "at", title: "AT版本" },
     { value: "hub", title: "HUB版本" },
+    { value: "max", title: "MAX版本" },
+    { value: "no6", title: "NO6版本" },
     // { value: "en-US", title: "English" },
   ],
 });
