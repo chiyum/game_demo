@@ -168,6 +168,7 @@
       <Game />
     </div>
   </div>
+  <Fab :parent="'.home'" />
   <!-- 若小遊戲遊玩次數為0則隱藏 目前為測試用所以都先固定顯示 -->
   <!-- <Buoy :num="playQuantity" /> -->
   <!-- <div class="home__bg"></div>
@@ -176,17 +177,22 @@
 </template>
 
 <script setup>
-// import { onMounted } from "vue";
+import { defineOptions } from "vue";
 import { useI18n } from "@/hooks/use-i18n";
 import { isEmpty } from "ramda";
 /** components */
 import Banner from "@/widgets/pages/hub/home/banner";
 import Marquee from "@/widgets/pages/hub/home/marquee";
 import Game from "@/widgets/pages/hub/home/game";
+import Fab from "@/widgets/fab.vue";
 // import Buoy from "@/widgets/pages/home/buoy";
 // import Download from "@/widgets/download";
 // import User from "@/widgets/pages/home/user.vue";
 
+/** 元件meta 讓_app/pages可以吃到設定資料 */
+defineOptions({
+  layout: "layout-hub-home",
+});
 const { t } = useI18n();
 const user = {
   id: 5,
@@ -224,6 +230,7 @@ const user = {
 const env = "prod";
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/hub/home.scss";
+@import "@/assets/scss/hub/main.scss";
 </style>

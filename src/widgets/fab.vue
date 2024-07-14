@@ -28,10 +28,22 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, onUnmounted, nextTick } from "vue";
+import {
+  ref,
+  reactive,
+  onMounted,
+  onUnmounted,
+  nextTick,
+  defineProps,
+} from "vue";
 import ModeService from "@/services/mode-service";
 import { useRouter } from "vue-router";
-
+const props = defineProps({
+  parent: {
+    type: String,
+    default: "",
+  },
+});
 const router = useRouter();
 
 const draggableElement = ref(null);
@@ -93,9 +105,13 @@ function stopDrag() {
 onMounted(() => {
   nextTick().then(() => {
     if (draggableElement.value) {
-      const parent = draggableElement.value.parentNode;
-      position.x = parent.offsetWidth - draggableElement.value.offsetWidth;
-      position.y = parent.offsetHeight - draggableElement.value.offsetHeight;
+      const propsParent = props.parent || null;
+      const parent = propsParent
+        ? document.querySelector(propsParent)
+        : draggableElement.value.parentNode;
+      position.x = parent.offsetWidth - draggableElement.value.offsetWidth - 10;
+      position.y =
+        parent.offsetHeight - draggableElement.value.offsetHeight - 50;
     }
   });
 });
@@ -123,7 +139,7 @@ onUnmounted(() => {
   justify-content: center;
   border-radius: 5rem;
   border: 1px solid #3aa2ec;
-  z-index: 10;
+  z-index: 200;
   &-actions {
     position: absolute;
     right: 100px;
@@ -137,7 +153,7 @@ onUnmounted(() => {
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid #3aa2ec;
     border-radius: 5px;
-    z-index: 3;
+    z-index: 11;
     & > div {
       display: flex;
       align-items: center;
