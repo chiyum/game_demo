@@ -41,7 +41,7 @@
       // background-size: cover;
       background-size: 100% 100%;
       // background-image: url('@/assets/images/game/game_bg_normal.png');
-      background-image: url("@/assets/images/game/background_left_btn_newyear.png");
+      // background-image: url("@/assets/images/game/background_left_btn_newyear.png");
       background-position: bottom;
       border-radius: 14px;
       overflow: hidden;
@@ -107,7 +107,7 @@
     & > span:nth-child(2) {
       color: #fff;
       border-radius: 6px;
-      background: url("@/assets/images/home/vip_1s.png") no-repeat center / cover;
+      // background: url("@/assets/images/home/vip_1s.png") no-repeat center / cover;
       // background: linear-gradient(to right, rgba(127, 170, 242, 1) 0%, rgba(82, 111, 232, 1) 100%);
     }
   }

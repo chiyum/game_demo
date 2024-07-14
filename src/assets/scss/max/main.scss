@@ -383,7 +383,7 @@ body {
   .go__back {
     width: 0.45rem;
     height: 0.45rem;
-    background-image: url("@/assets/images/trade/icon_back.svg");
+    // background-image: url("@/assets/images/trade/icon_back.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -434,19 +434,19 @@ input:-webkit-autofill:active {
     background-repeat: no-repeat;
     &.line //line
     {
-      background-image: url("@/assets/images/icon_cus_line.png");
+      // background-image: url("@/assets/images/icon_cus_line.png");
     }
     &.zalo //zalo
     {
-      background-image: url("@/assets/images/icon_cus_zalo.png");
+      // background-image: url("@/assets/images/icon_cus_zalo.png");
     }
     &.telegram //talegram
     {
-      background-image: url("@/assets/images/icon_btn_tg.png");
+      // background-image: url("@/assets/images/icon_btn_tg.png");
     }
     &.kakao //kakao
     {
-      background-image: url("@/assets/images/icon_btn_kakao.png");
+      // background-image: url("@/assets/images/icon_btn_kakao.png");
     }
   }
 }
