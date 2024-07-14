@@ -87,13 +87,9 @@
 
             <div class="platform_mode_5">
               <div class="platform_item platform_item_purple">
-                <div class="g-container">
+                <div class="g-container" style="display: flex">
                   <ul style="--s: 3">
                     <li>免費電影</li>
-                    <li>討論區</li>
-                    <li>酷映直播</li>
-                    <li>免費電影</li>
-                    <li>討論區</li>
                   </ul>
                 </div>
                 <div class="platform_item_logo">

@@ -165,7 +165,7 @@ const env = "prod";
 // ];
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/max/home.scss";
 @import "@/assets/scss/max/main.scss";
 </style>

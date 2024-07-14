@@ -81,7 +81,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .swiper-pagination {
   line-height: 0;
 }

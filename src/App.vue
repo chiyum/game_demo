@@ -18,7 +18,7 @@ import { isNil, defaultTo, path } from "ramda";
 // import pro168 from "@/assets/images/pro168_logo.png";
 export default {
   setup() {
-    const useRemMode = ["max", "hub"];
+    const useRemMode = ["max", "hub", "no6"];
     const route = useRoute();
     const mode = computed(() => inject("mode-service"));
     const layout = computed(() => {

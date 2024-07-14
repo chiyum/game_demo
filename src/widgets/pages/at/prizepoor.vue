@@ -45,7 +45,7 @@ const init = () => {
   /** 每5秒隨機產生亂數跑動 */
   setInterval(() => {
     setPrizepoor();
-  }, 3000);
+  }, 5000);
 };
 
 init();
