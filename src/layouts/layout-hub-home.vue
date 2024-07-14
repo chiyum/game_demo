@@ -26,7 +26,7 @@
             alt="優惠"
           />
           <div class="text-white text-3lg mt-[2px] break-words text-center">
-            {{ t("優混") }}
+            {{ t("優惠") }}
           </div>
         </div>
       </div>
