@@ -56,6 +56,7 @@
     <Banner />
     <Prizepoor />
     <Game />
+    <Fab />
   </div>
 </template>
 
@@ -69,6 +70,7 @@ import Banner from "@/widgets/banner.vue";
 import Marquee from "@/widgets/marquee.vue";
 import Game from "@/widgets/pages/at/game.vue";
 import Prizepoor from "@/widgets/pages/at/prizepoor.vue";
+import Fab from "@/widgets/fab.vue";
 
 /** 元件meta 讓_app/pages可以吃到設定資料 */
 defineOptions({
