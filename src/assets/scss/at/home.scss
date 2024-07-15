@@ -474,7 +474,7 @@
         flex-direction: column;
         position: relative;
         &-header {
-          position: fixed;
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -506,7 +506,9 @@
           }
         }
         &-main {
-          margin-top: 60px;
+          height: 100%;
+          overflow: scroll;
+          // margin-top: 60px;
           flex-grow: 1;
           display: grid;
           grid-template-columns: repeat(3, 1fr);

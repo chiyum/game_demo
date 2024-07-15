@@ -50,10 +50,10 @@ const draggableElement = ref(null);
 const isShowActions = ref(false);
 const state = reactive({
   modeList: [
-    { value: "at", title: "AT版本" },
-    { value: "hub", title: "HUB版本" },
-    { value: "max", title: "MAX版本" },
-    { value: "no6", title: "NO6版本" },
+    { value: "at", title: "AT" },
+    { value: "hub", title: "HUB" },
+    { value: "max", title: "MAX" },
+    { value: "no6", title: "NO6" },
     // { value: "en-US", title: "English" },
   ],
 });
