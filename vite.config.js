@@ -49,7 +49,7 @@ export default defineConfig(({ mode }) => {
           drop_debugger: true,
         },
       },
-      outDir: "./docs", // 您想要的输出目录
+      outDir: "./dist", // 您想要的输出目录
       chunkSizeWarningLimit: 10000,
     },
   };
