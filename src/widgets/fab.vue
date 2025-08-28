@@ -51,7 +51,7 @@ const isShowActions = ref(false);
 const state = reactive({
   modeList: [
     { value: "at", title: "AT" },
-    { value: "hub", title: "HUB" },
+    // { value: "hub", title: "HUB" },
     { value: "max", title: "MAX" },
     { value: "no6", title: "NO6" },
     // { value: "en-US", title: "English" },

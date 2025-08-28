@@ -1,10 +1,7 @@
 <template>
   <div class="home">
     <div class="home__header" :class="[env]" ref="head">
-      <img
-        style="width: 78px"
-        src="https://www.newtha.com/Mobile/images/main/logo_2_2.svg"
-      />
+      <img style="width: 78px" src="@/assets/images/home/88win2-logo-pc.png" />
       <div class="login_reg" style="display: flex">
         <div class="log_btn reg" id="register">註冊</div>
         <div class="log_btn log">登入</div>

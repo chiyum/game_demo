@@ -390,43 +390,43 @@ import { getImageUrl } from "@/utils/getImageUrl";
 
 const { t } = useI18n();
 const links = [
+  // {
+  //   icon: "https://www.newtha.com/Mobile/images/main/icon_hot.svg",
+  //   icon_focus: getImageUrl("temp/icon_hot_on.svg"),
+  //   title: "熱門",
+  // },
   {
-    icon: "https://www.newtha.com/Mobile/images/main/icon_hot.svg",
-    icon_focus: getImageUrl("temp/icon_hot_on.svg"),
-    title: "熱門",
-  },
-  {
-    icon: "https://www.newtha.com/Mobile/images/TS5588/icon_live.svg",
+    icon: getImageUrl("home/OBmenu_M_live.png"),
     icon_focus: getImageUrl("temp/icon_live_on.svg"),
     title: "真人",
   },
   {
-    icon: "	https://www.newtha.com/Mobile/images/TS5588/icon_slot.svg",
+    icon: getImageUrl("home/OBmenu_M_egame.png"),
     icon_focus: getImageUrl("temp/icon_slot_on.png"),
     title: "電子",
   },
   {
-    icon: "	https://www.newtha.com/Mobile/images/TS5588/icon_sport.svg",
+    icon: getImageUrl("home/OBmenu_M_sport.png"),
     icon_focus: getImageUrl("temp/icon_sport_on.png"),
     title: "體育",
   },
   {
-    icon: "https://www.newtha.com/Mobile/images/TS5588/icon_loto.svg",
+    icon: getImageUrl("home/OBmenu_M_lottery.png"),
     icon_focus: getImageUrl("temp/icon_loto_on.png"),
     title: "彩球",
   },
   {
-    icon: "	https://www.newtha.com/Mobile/images/TS5588/icon_fish.svg",
+    icon: getImageUrl("home/OBmenu_M_esport.png"),
     icon_focus: getImageUrl("temp/icon_fish_on.png"),
     title: "捕魚",
   },
   {
-    icon: "https://www.newtha.com/Mobile/images/TS5588/icon_chess.svg",
+    icon: getImageUrl("home/OBmenu_M_esport.png"),
     icon_focus: getImageUrl("temp/icon_chess_on.png"),
     title: "對戰",
   },
   {
-    icon: "https://www.newtha.com/Mobile/images/TS5588/icon_esport.svg",
+    icon: getImageUrl("home/OBmenu_M_esport.png"),
     icon_focus: getImageUrl("temp/icon_esport_on.png"),
     title: "電競",
   },

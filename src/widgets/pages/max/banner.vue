@@ -33,6 +33,7 @@ import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
+import getImageUrl from "@/utils/getImageUrl";
 // import { getImageUrl } from "@/utils/getImageUrl";
 
 export default {
@@ -41,15 +42,7 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const images = ref([
-      "https://pic.jiejilawei.com/pic2/ts5588/11_M_TW.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/9_M_TW.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/8_M_TW.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/M_BN_TW.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/4_S2.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/mobile-tc.jpg",
-      "https://pic.jiejilawei.com/pic2/ts5588/5mins_M_tw.jpg",
-    ]);
+    const images = ref([getImageUrl("home/BannerGuest01.jpg")]);
     const sortDefaultList = () => {
       images.value = images.value.map((image) => {
         return {
